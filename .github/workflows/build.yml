@@ -36,12 +36,18 @@ jobs:
             bundles: "dmg,app"
           - platform: "ubuntu-22.04"
             bundles: "appimage,updater"
+            env:
+              LINUXDEPLOY_EXCLUDED_LIBRARIES: libwayland-*
           - platform: "ubuntu-22.04-arm"
             target: "aarch64-unknown-linux-gnu"
             bundles: "appimage,updater"
+            env:
+              LINUXDEPLOY_EXCLUDED_LIBRARIES: libwayland-*
           - platform: "ubuntu-22.04"
             target: "i686-unknown-linux-gnu"
             bundles: "appimage,updater"
+            env:
+              LINUXDEPLOY_EXCLUDED_LIBRARIES: libwayland-*
           - platform: "windows-latest"
             bundles: "nsis"
           - platform: "windows-latest"
